@@ -41,7 +41,7 @@ source .venv/bin/activate  # Linux/Mac
 pip install -r requirements.txt
 ```
 
-4. Change .envexample to your .env.  Set environment variables or update `settings.py` with your credentials (API keys, SMTP credentials). 
+4. Change .env.example to your .env.  Set environment variables or update `settings.py` with your credentials (API keys, SMTP credentials). 
 
 5. Run migrations:
 
