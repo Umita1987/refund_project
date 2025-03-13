@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Статус запроса</title>
+</head>
+<body>
+    <p>Здравствуйте, {{ refund.first_name }}!</p>
+    <p>
+        Ваш запрос на возврат <strong>#{{ refund.id }}</strong>
+        (номер заказа: {{ refund.order_number }}) теперь имеет статус
+        <strong>{{ refund.status }}</strong>.
+    </p>
+    <p>Спасибо, что воспользовались нашей системой возвратов!</p>
+</body>
+</html>

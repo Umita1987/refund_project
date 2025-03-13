@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container mt-5">
+    <h2>My Refund Requests</h2>
+    <table class="table table-bordered">
+        <thead class="table-light">
+            <tr>
+                <th>ID</th>
+                <th>Order Number</th>
+                <th>Order Date</th>
+                <th>Status</th>
+                <th>Created At</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for refund in refunds %}
+            <tr>
+                <td>{{ refund.id }}</td>
+                <td>{{ refund.order_number }}</td>
+                <td>{{ refund.order_date }}</td>
+                <td>{{ refund.status }}</td>
+                <td>{{ refund.created_at }}</td>
+                <td>
+                    <a href="{% url 'refund_detail' refund.pk %}" class="btn btn-sm btn-info">View</a>
+                </td>
+            </tr>
+        {% empty %}
+            <tr>
+                <td colspan="6" class="text-center">No refund requests found.</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

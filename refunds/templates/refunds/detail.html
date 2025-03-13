@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2>Refund Request Details</h2>
+    <ul class="list-group">
+        <li class="list-group-item"><strong>Order Number:</strong> {{ refund.order_number }}</li>
+        <li class="list-group-item"><strong>Order Date:</strong> {{ refund.order_date }}</li>
+        <li class="list-group-item"><strong>Status:</strong> {{ refund.status }}</li>
+        <li class="list-group-item"><strong>First Name:</strong> {{ refund.first_name }}</li>
+        <li class="list-group-item"><strong>Last Name:</strong> {{ refund.last_name }}</li>
+        <li class="list-group-item"><strong>IBAN Verified:</strong> {{ refund.iban_verified }}</li>
+        <li class="list-group-item"><strong>Reason:</strong> {{ refund.reason }}</li>
+        <li class="list-group-item"><strong>Created At:</strong> {{ refund.created_at }}</li>
+    </ul>
+</div>
+{% endblock %}
